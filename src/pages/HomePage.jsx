@@ -2,6 +2,8 @@ import Navbar from "../components/Navbar";
 import Main from "../components/Main";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
+import Banner from "../components/Banner";
+import ListenButton from "../components/ListenButton";
 export default function HomePage() {
   const [it, setIt] = useState(false);
   const { ref, inView, entry } = useInView({
@@ -17,6 +19,8 @@ export default function HomePage() {
       <div ref={ref} className="h-[700px] bg-black text-white">
         {inView && "hello"}
       </div>
+      <ListenButton></ListenButton>
+      <Banner></Banner>
     </>
   );
 }

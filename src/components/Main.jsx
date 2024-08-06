@@ -1,7 +1,6 @@
 import shazam from "../assets/group.webp";
 import qrCode from "../assets/qrcode.webp";
 import { Link } from "react-router-dom";
-import { useInView } from "react-intersection-observer";
 
 export default function Main() {
   return (
@@ -22,11 +21,11 @@ export default function Main() {
               <img className="max-h-[100px] rounded-2xl" src={qrCode} alt="" />
               <h1 className="font-semibold">
                 Get the app <br />
-                <h1 className="font-light">
+                <span className="font-light">
                   Scan the code with your smart phone
                   <br />
                   camera to download the free app
-                </h1>
+                </span>
               </h1>
             </div>
             <h1 className="mt-3 text-[#dfdada] text-[13px]">

@@ -6,8 +6,8 @@ import apple from "../assets/apple.svg";
 export default function Navbar({ inView }) {
   return (
     <div
-      className={`py-3 flex justify-evenly items-center  top-0 left-0 right-0 z-[1]  text-white fixed transition-bg duration-500 ${
-        inView && "text-black bg-white"
+      className={`py-3 flex justify-evenly items-center  top-0 left-0 right-0 z-[1] transition-all duration-500   fixed ${
+        inView === true ? "text-black bg-white" : `text-white `
       }`}
     >
       <div className="flex gap-8 items-center">
@@ -17,7 +17,11 @@ export default function Navbar({ inView }) {
             className=""
             alt=""
           />
-          <h1 className={`merge-bold text-white   ${inView && "text-black"}`}>
+          <h1
+            className={`merge-bold  ${
+              inView == true ? `text-black` : `text-white `
+            }`}
+          >
             SHAZAM
           </h1>
         </button>
@@ -32,13 +36,17 @@ export default function Navbar({ inView }) {
             type="text"
             className="outline-none bg-transparent pointer-events-none"
           />
-          <button className={`text-[20px] ${inView && `text-[#066bff]`}`}>
+          <button
+            className={`text-[20px] ${
+              inView === true ? `text-[#066bff]` : `text-white`
+            }`}
+          >
             <ion-icon name="search-outline"></ion-icon>
           </button>
         </div>
         <button
-          className={`flex text-[17px] font-semibold px-4 py-1.5 text-[#066bff] bg-white  rounded-lg ${
-            inView && `bg-[#066bff]`
+          className={`flex text-[17px] font-semibold px-4 py-1.5 text-[#066bff]  rounded-lg ${
+            inView === true ? `bg-[#066bff]` : `bg-white `
           }`}
         >
           <span
