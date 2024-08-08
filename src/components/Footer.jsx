@@ -2,7 +2,7 @@ import shazamBlack from "../assets/shazamBlack.svg";
 import bg from "../assets/bg.jpg";
 import appStore from "../assets/appStore.png";
 import chromeStore from "../assets/chromeStore.png";
-import galaxyStore from "../assets/galaxyStore.webp";
+import galaxyStore from "../assets/galaxystore.webp";
 import androidStore from "../assets/googleplay.png";
 import facebook from "../assets/ifacebook.svg";
 import x from "../assets/ix.png";

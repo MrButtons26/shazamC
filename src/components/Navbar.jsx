@@ -3,8 +3,10 @@ import shazamBlack from "../assets/shazamBlack.svg";
 import appleBlack from "../assets/appleBlack.svg";
 import { Link } from "react-router-dom";
 import apple from "../assets/apple.svg";
+import { useState } from "react";
 
 export default function Navbar({ inView }) {
+  const [srchBtn, setSrchBtn] = useState(false);
   return (
     <div
       className={`py-3 flex justify-evenly items-center  top-0 left-0 right-0 z-[1] transition-all duration-500   fixed ${
@@ -22,6 +24,7 @@ export default function Navbar({ inView }) {
             className={`merge-bold  ${
               inView == true ? `text-black` : `text-white `
             }`}
+            style={{ font: "MyFont" }}
           >
             SHAZAM
           </h1>
@@ -36,13 +39,27 @@ export default function Navbar({ inView }) {
         </Link>
       </div>
       <div className="flex items-center gap-8">
-        <div className="flex items-center">
+        <div
+          className={`flex items-center transition-all duration-500 px-4 py-1 ${
+            srchBtn === true ? `  rounded-md glass-effect-search` : ``
+          }`}
+        >
           <input
             type="text"
-            className="outline-none bg-transparent pointer-events-none"
+            placeholder={`${
+              srchBtn === true ? "Search for Music" : `Search for Music`
+            }`}
+            className={` w-[250px] text-white placeholder-white outline-none bg-transparent transition-all duration-500 ${
+              srchBtn === false
+                ? `pointer-events-none opacity-0`
+                : `opacity-100`
+            }`}
           />
           <button
-            className={`text-[20px] ${
+            onClick={() => {
+              setSrchBtn(!srchBtn);
+            }}
+            className={`text-[20px] ml-3 ${
               inView === true ? `text-[#066bff]` : `text-white`
             }`}
           >
