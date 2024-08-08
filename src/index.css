@@ -8,6 +8,7 @@
   body {
     height: 200vh;
   }
+
   @font-face {
     font-family: "MyFont";
     src: url("../src/assets/NeueMontreal-bold.otf") format("opentype");
@@ -33,6 +34,11 @@
   ion-icon {
     --ionicon-stroke-width: 80px;
   }
+  span > ion-icon {
+    --ionicon-stroke-width: 42px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
   .glass-effect {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
@@ -52,6 +58,10 @@
   .container-grid > div {
     grid-area: 1/1;
     animation: pulse 2000ms infinite;
+  }
+
+  ul > li {
+    margin-top: 3.5px;
   }
 
   @keyframes pulse {

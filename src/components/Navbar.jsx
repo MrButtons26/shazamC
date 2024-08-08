@@ -3,15 +3,16 @@ import shazamBlack from "../assets/shazamBlack.svg";
 import appleBlack from "../assets/appleBlack.svg";
 import { Link } from "react-router-dom";
 import apple from "../assets/apple.svg";
+
 export default function Navbar({ inView }) {
   return (
     <div
       className={`py-3 flex justify-evenly items-center  top-0 left-0 right-0 z-[1] transition-all duration-500   fixed ${
-        inView === true ? "text-black bg-white" : `text-white `
+        inView === true ? "text-black bg-white shadow-2xl" : `text-white `
       }`}
     >
       <div className="flex gap-8 items-center">
-        <button className="flex gap-1.5 mr-2 items-center">
+        <Link to={"/"} className="flex gap-1.5 mr-2 items-center">
           <img
             src={inView === false ? shazam : shazamBlack}
             className=""
@@ -24,11 +25,15 @@ export default function Navbar({ inView }) {
           >
             SHAZAM
           </h1>
-        </button>
-        <Link className="my-font">GET THE APP</Link>
-        <Link className="my-font">CONCERTS</Link>
-        <Link className="my-font">CHARTS</Link>
-        <Link className="my-font">RADIO SPINS</Link>
+        </Link>
+        <Link to={"/apps"} className="my-font hover:border-b-[1px] pt-[1px]">
+          GET THE APP
+        </Link>
+        <Link className="my-font hover:border-b-[1px] pt-[1px]">CONCERTS</Link>
+        <Link className="my-font hover:border-b-[1px] pt-[1px]">CHARTS</Link>
+        <Link className="my-font hover:border-b-[1px] pt-[1px]">
+          RADIO SPINS
+        </Link>
       </div>
       <div className="flex items-center gap-8">
         <div className="flex items-center">

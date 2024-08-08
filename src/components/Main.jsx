@@ -7,14 +7,14 @@ export default function Main() {
     <>
       {" "}
       <div className=" z-[-1] pt-36 pb-28">
-        <div className="flex justify-center gap-20">
+        <div className="flex justify-center flex-wrap mx-8 md:gap-20">
           <img src={shazam} className=" max-h-[650px]" alt="" />
-          <div className="flex flex-col mt-28">
-            <h1 className="text-[50px] font-bold text-white">
+          <div className="flex flex-col md:mt-28">
+            <h1 className="text-[30px] font-bold text-white md:text-[50px]">
               Name songs in <br />
               seconds
             </h1>
-            <h1 className="text-[20px] text-white font-semibold">
+            <h1 className="text-[16px] text-white font-semibold md:text-[20px]">
               Find music, concerts and more with Shazam
             </h1>
             <div className="flex mt-8 glass-effect text-white gap-6 py-4 px-4 rounded-3xl">
