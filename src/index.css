@@ -39,6 +39,9 @@
     margin-left: 2px;
     margin-right: 2px;
   }
+  button > ion-icon {
+    --ionicon-stroke-width: 36px;
+  }
   .glass-effect {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
