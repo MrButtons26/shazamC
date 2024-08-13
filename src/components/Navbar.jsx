@@ -5,15 +5,16 @@ import { Link } from "react-router-dom";
 import apple from "../assets/apple.svg";
 import { useState } from "react";
 
-export default function Navbar({ inView }) {
+export default function Navbar({ inView, charts = false }) {
   const [srchBtn, setSrchBtn] = useState(false);
   const [navBtn, setNavBtn] = useState(false);
 
   return (
     <div
-      className={`py-3 flex justify-evenly items-center  top-0 left-0 right-0 z-[1] transition-all duration-500   fixed ${
+      className={` py-3 flex justify-evenly items-center  top-0 left-0 right-0 z-[1] transition-all duration-500   fixed ${
         inView === true ? "text-black bg-white shadow-2xl" : `text-white `
-      }`}
+      } ${charts === true ? "toggle-nav" : ""}
+      `}
     >
       <div className="flex gap-8 items-center">
         <Link to={"/"} className="flex gap-1.5 mr-2 items-center">
@@ -40,7 +41,10 @@ export default function Navbar({ inView }) {
         <Link className="hidden my-font hover:border-b-[1px] pt-[1px] lg:block">
           CONCERTS
         </Link>
-        <Link className=" hidden my-font hover:border-b-[1px] pt-[1px] lg:block">
+        <Link
+          to={"/charts"}
+          className=" hidden my-font hover:border-b-[1px] pt-[1px] lg:block"
+        >
           CHARTS
         </Link>
         <Link className=" hidden my-font hover:border-b-[1px] pt-[1px] lg:block">
