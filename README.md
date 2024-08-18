@@ -4,7 +4,7 @@ The Shazam App is a robust full-stack application engineered to deliver an exten
 
 ## Deployment
 
-- **Frontend:** :- https://willowy-melba-ced052.netlify.app
+- **Frontend:** :- https://voluble-horse-0a1a52.netlify.app/
 
 ### Frontend Setup
 
